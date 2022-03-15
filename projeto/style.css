@@ -1,0 +1,65 @@
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 159;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 4.5rem;
+}
+
+span {
+  color: hsl(var(--hue) 36% 57%);
+}
+
+body {
+  font: 400 1rem "DM Sans", sans-serif;
+  color: var(--text-color);
+  background-color: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  width: 90%;
+  height: auto;
+}
+
+h2 {
+  font: 400 30px "DM Sans", sans-serif;
+  -webkit-font-smoothing: auto;
+  color: var(--title-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-light);
+  background-color: var(--base-color);
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  height: 3.5rem;
+  border-radius: 0.25rem;
+  font: 500 1rem "DM Sans", sans-serif;
+  transition: background 0.3s;
+}
+
+a:hover {
+  background-color: var(--base-color-alt)
+}
