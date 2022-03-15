@@ -18,15 +18,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-header {
-  display: flex;
-  justify-content: space-between;
-  height: 4.5rem;
+img {
+  width: 100%;
+  height: auto;
 }
 
-span {
-  color: hsl(var(--hue) 36% 57%);
+a {
+  text-decoration: none;
 }
 
 body {
@@ -34,21 +32,16 @@ body {
   color: var(--text-color);
   background-color: var(--body-color);
   -webkit-font-smoothing: antialiased;
+  margin: 0 1.5rem 0 1.5rem;
 }
 
-img {
-  width: 90%;
-  height: auto;
-}
-
-h2 {
-  font: 400 30px "DM Sans", sans-serif;
-  -webkit-font-smoothing: auto;
+h1 {
+  font: 700 1.875rem "Poppins", sans-serif;
   color: var(--title-color);
+  -webkit-font-smoothing: auto;
 }
 
-a {
-  text-decoration: none;
+.button {
   color: var(--text-color-light);
   background-color: var(--base-color);
   display: inline-flex;
@@ -57,9 +50,110 @@ a {
   height: 3.5rem;
   border-radius: 0.25rem;
   font: 500 1rem "DM Sans", sans-serif;
-  transition: background 0.3s;
+  transition: background 1s;
 }
 
-a:hover {
-  background-color: var(--base-color-alt)
+.button:hover {
+  background-color: var(--base-color-alt);
+}
+
+.container {
+  margin: 0 1.5rem 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--body-color);
+}
+
+nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font: 700 1.31rem "Poppins", sans-serif;
+  color: var(--title-color);
+}
+
+.logo span {
+  color: var(--base-color);
+}
+
+main {
+  height: var(--header-height);
+}
+
+#home {
+  overflow: hidden;
+}
+
+#home .container {
+  margin: 0;
+}
+
+#home .image {
+  position: relative;
+}
+
+#home .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: var(--base-color-second);
+  position: absolute;
+  top: -16.8%;
+  left: 16.7%;
+  z-index: 0;
+}
+
+#home .image img {
+  position: relative;
+  right: 2.93rem;
+}
+
+#home .image img,
+#home .image::before {
+  border-radius: 0.25rem;
+}
+
+#home .text {
+  text-align: center;
+  margin: 0 1.5rem 0 1.5rem;
+}
+
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
+}
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
 }
