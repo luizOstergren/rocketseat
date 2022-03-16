@@ -38,7 +38,6 @@ body {
   color: var(--text-color);
   background-color: var(--body-color);
   -webkit-font-smoothing: antialiased;
-  margin: 0 1.5rem 0 1.5rem; /*nao tem essa linha, deve estar em outro lugar*/
 }
 
 .title {
@@ -219,7 +218,7 @@ main {
 }
 
 #home .image::before {
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   background-color: var(--base-color-second);
@@ -265,11 +264,11 @@ main {
 }
 
 #about .image::before{
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   background-color: var(--base-color-second);
-  position: relative;
+  position: absolute;
   top: -8.3%;
   left: -33%;
   z-index: 0;
